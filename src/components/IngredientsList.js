@@ -1,12 +1,16 @@
-import Ingredient from './Ingredient'
+import React from "react";
+import Ingredient from "./Ingredient";
 
-export const IngredientsList = ({ list }) =>
-    <ul className="ingredients">
-        {list.map((ingredient, i) =>
-            <Ingredient key={i} {...ingredient} />
-        )}
-    </ul>
+const IngredientsList = ({ list }) => {
+    return (
+        <React.StrictMode>
+            <ul className="ingredients">
+                {list.map((ingredient, i) => (
+                    <Ingredient key={i} {...ingredient} />
+                ))}
+            </ul>
+        </React.StrictMode>
+    );
+}
 
-IngredientsList.displayName = 'IngredientsList'
-
-export default IngredientsList
+export default IngredientsList;

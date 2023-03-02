@@ -1,10 +1,13 @@
-const Ingredient = ({ amount, measurement, name }) =>
-    <li>
-        <span className="amount">{amount} </span>
-        <span className="measurement">{measurement} </span>
-        <span className="name">{name}</span>
-    </li>
+import React from "react";
 
-Ingredient.displayName = 'Ingredient'
+const Ingredient = ({ amount, measurement, name }) => {
+    return (
+        <React.StrictMode>
+            <li>
+                {amount} {measurement} {name}
+            </li>
+        </React.StrictMode>
+    );
+}
 
-export default Ingredient
+export default Ingredient;

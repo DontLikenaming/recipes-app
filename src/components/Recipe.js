@@ -1,21 +1,17 @@
 import React from "react";
+import IngredientsList from "./IngredientsList";
+import Instructions from "./Instructions";
+
 
 const Recipe = ({ name, ingredients, steps }) => {
     return (
-        <section id="baked-salmon">
+        <React.StrictMode>
+        <section id={name.toLowerCase().replace(/ /g, '-')}>
             <h3>{name}</h3>
-            <ul className="ingredients">
-                {ingredients.map((ingredient, i) => (
-                    <li key={i}>{ingredient.name}</li>
-                ))}
-            </ul>
-            <section className="instructions">
-                <h3>Instruction</h3>
-                {steps.map((step, i) => (
-                    <p key={i}>{step}</p>
-                ))}
-            </section>
+            <IngredientsList list={ingredients} />
+            <Instructions title="조리 방법" steps={steps} />
         </section>
+        </React.StrictMode>
     );
 }
 
