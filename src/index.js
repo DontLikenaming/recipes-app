@@ -6,6 +6,6 @@ import data from "./data/recipes_ko.json";
 
 ReactDOM.render(
     <React.StrictMode>
-    <Menu recipes={data} />
+        <Menu recipes={data} />
     </React.StrictMode>,
     document.getElementById("root"));
