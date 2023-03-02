@@ -4,7 +4,7 @@ const Ingredient = ({ amount, measurement, name }) => {
     return (
         <React.StrictMode>
             <li>
-                {amount} {measurement} {name}
+                {name} {amount} {measurement}
             </li>
         </React.StrictMode>
     );
